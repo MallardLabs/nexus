@@ -4,8 +4,8 @@
   "description": "Nexus. The powerful Discord bot for managing your Mallard products and services.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node --no-deprecation src/server.js",
-    "dev": "nodemon --no-deprecation src/server.js"
+    "start": "node --no-deprecation src/index.js",
+    "dev": "nodemon --no-deprecation src/index.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.46.1",
