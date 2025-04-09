@@ -133,9 +133,11 @@ module.exports = {
         .setDescription(
           `
           Discord: ${user.discord_username}
-          Minecraft: ${user.minecraft_username || "Not linked"}
+          Minecraft Username: ${user.minecraft_username || "Not linked"}
+          Minecraft ID: ${user.minecraft_id || "Not linked"}
+          Balance: ⚡ ${user.balance}
           Status: ${user.is_verified ? "✅ Verified" : "❌ Not verified"}
-          ...
+          
         `
         )
         .setColor(COLORS.PRIMARY)
