@@ -14,7 +14,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 const fs = require("fs");
 const supabase = require("./utils/supabase");
-
+const { startServer } = require("./server");
 dotenv.config();
 
 const client = new Client({
@@ -271,4 +271,5 @@ const startDiscordBot = async () => {
   }
 };
 
-startDiscordBot()
+startServer();
+startDiscordBot();
