@@ -3,11 +3,11 @@ const path = require('path');
 const fs = require('fs').promises;
 
 class ImageGenerationError extends Error {
-  constructor(message, code, isRetryable) {
+  constructor(message, code, recoverable = true) {
     super(message);
     this.name = 'ImageGenerationError';
     this.code = code;
-    this.isRetryable = isRetryable;
+    this.recoverable = recoverable;
   }
 }
 
@@ -27,7 +27,10 @@ class InMemoryImageGenerator {
       return this.backgroundPromise;
     }
 
-    this.backgroundPromise = fs.readFile(path.join(__dirname, '..', 'assets', 'authimage.png'))
+    const bgPath = path.join(__dirname, '..', 'assets', 'authimage.png');
+    console.log('Full image path:', bgPath);
+
+    this.backgroundPromise = fs.readFile(bgPath)
       .then(buffer => {
         this.backgroundImage = buffer;
         return buffer;
@@ -99,7 +102,11 @@ class InMemoryImageGenerator {
   }
 }
 
+// Create a singleton instance
+const imageGenerator = new InMemoryImageGenerator();
+
+// Export the function directly
 module.exports = {
-  imageGenerator: new InMemoryImageGenerator(),
+  generateTokenImage: (token) => imageGenerator.generateTokenImage(token),
   ImageGenerationError
 };
