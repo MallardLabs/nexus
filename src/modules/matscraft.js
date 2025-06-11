@@ -135,7 +135,7 @@ module.exports = {
           Discord: ${user.discord_username}
           Minecraft Username: ${user.minecraft_username || "Not linked"}
           Minecraft ID: ${user.minecraft_id || "Not linked"}
-          Balance: ⚡ ${user.balance}
+          Balance: ${user.mats} MATS | ${user.huh} HUH
           Status: ${user.is_verified ? "✅ Verified" : "❌ Not verified"}
           
         `
