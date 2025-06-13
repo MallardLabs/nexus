@@ -52,8 +52,8 @@ module.exports = {
       .single();
     console.log(interaction.user.id);
     const embed = new EmbedBuilder()
-      .setTitle("matsCraft Account Manager")
-      .setDescription("Link your Discord account with your matsCraft account")
+      .setTitle("Matscraft Account Manager")
+      .setDescription("Link your Discord account with your Matscraft account")
       .addFields(
         {
           name: "⚡ Account Status",
@@ -428,14 +428,14 @@ module.exports = {
 
   async showHelp(interaction) {
     const embed = new EmbedBuilder()
-      .setTitle("matsCraft Help & Commands")
-      .setDescription("Learn how to use the matsCraft account manager")
+      .setTitle("Matscraft Help & Commands")
+      .setDescription("Learn how to use the Matscraft account manager")
       .addFields(
         {
           name: "🔗 Account Linking",
           value:
             '1. Click "Generate Code" to get a verification code\n' +
-            "2. Join the matsCraft server\n" +
+            "2. Join the Matscraft server\n" +
             "3. Type `/link` in the game chat\n" +
             "4. Enter the verification code\n" +
             "⚠️ Codes expire after 5 minutes",
@@ -469,7 +469,7 @@ module.exports = {
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
         .setCustomId("back_to_matscraft")
-        .setLabel("Back to matsCraft")
+        .setLabel("Back to Matscraft")
         .setStyle(ButtonStyle.Secondary)
         .setEmoji("↩️")
     );
@@ -592,8 +592,8 @@ module.exports = {
       const user = existingUsers[0];
 
       const embed = new EmbedBuilder()
-        .setTitle("matsCraft Account Manager")
-        .setDescription("Link your Discord account with your matsCraft account")
+        .setTitle("Matscraft Account Manager")
+        .setDescription("Link your Discord account with your Matscraft account")
         .addFields(
           {
             name: "⚡ Account Status",
