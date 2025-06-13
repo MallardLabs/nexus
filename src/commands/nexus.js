@@ -34,7 +34,7 @@ module.exports = {
       .addComponents(
         new ButtonBuilder()
           .setCustomId('matscraft')
-          .setLabel('matsCraft Manager')
+          .setLabel('Matscraft Manager')
           .setStyle(ButtonStyle.Primary)
           .setEmoji('🎮'),
         new ButtonBuilder()

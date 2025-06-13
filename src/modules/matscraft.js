@@ -309,8 +309,8 @@ module.exports = {
         .setTitle("Account Verification Code")
         .setDescription(
           "To link your account:\n" +
-            "1. Join the matsCraft server\n" +
-            "2. Type `/link` in the game chat\n" +
+            "1. Join the Matscraft server\n" +
+            "2. Access Matsphone > Link Account\n" +
             "3. Enter the code shown below\n\n" +
             `⏱️ Code expires <t:${Math.floor(expiryTime.getTime() / 1000)}:R>`
         )
